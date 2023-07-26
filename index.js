@@ -10,6 +10,7 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 1;
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
+app.use(express.static('client'));
 
 let phrases=[
     {"phrase":"A journey of a thousand miles begins with a single step" ,"likes":0},
