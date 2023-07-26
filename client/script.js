@@ -25,7 +25,7 @@ function init() {
 }
 async function update_like(){
     likes.innerText=` ${parseInt(likes.innerHTML) + 1}`;
-    url = `http://localhost:3000/put/${currentPrase}`
+    url = `http://localhost:8080/put/${currentPrase}`
     let li = parseInt(likes.innerHTML)  ;
     const req = {"updLike" : li};
     
@@ -36,7 +36,7 @@ async function random_images(){
     image.style.display = "block"
     likes.style.display = "block"
 
-    url = `http://localhost:3000/get`
+    url = `http://localhost:8080/get`
     
     res = await axios.get(url)
     
@@ -53,7 +53,7 @@ async function addPhrase(){
     data={
         "text":text1
     }
-    url = `http://localhost:3000/post`
+    url = `http://localhost:8080/post`
     res=await axios.post(url,data) ; 
 
 }
