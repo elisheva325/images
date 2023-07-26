@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 1;
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 
 app.use(bodyParser.json());
